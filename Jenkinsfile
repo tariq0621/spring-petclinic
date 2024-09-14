@@ -12,9 +12,7 @@ pipeline {
                 PATH = "${JAVA_HOME}/bin:/opt/apache-maven-3.9.9/bin:${env.PATH}"
             }
             steps {
-                sh "
-                    mvn clean package
-                   "
+                sh "mvn clean package"
             }
         }
         stage('Deploy Stage') {
